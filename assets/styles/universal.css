@@ -1,0 +1,405 @@
+@font-face {
+    font-family: 'Trattatello';
+    src: url('assets/fonts/Trattatello.ttf'); 
+}
+@font-face {
+    font-family: 'Neue Machina';
+    src: url('assets/fonts/NeueMachina.otf'); 
+}
+
+/* ALL DEVICES*/
+*   {
+    box-sizing: border-box;
+}
+::selection {
+    color: white;
+    background: var(--flourish-color);
+  }
+body {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Manrope';
+    background-color: #FAECD0;
+    color: #544227;
+}
+h1, h2, header:first-child 
+{
+    font-family: 'Jacquard 12';
+    font-weight: normal;
+}
+h1
+{
+    font-size: 58px;
+}
+main a, .flourish
+{
+    color: var(--flourish-color);
+}
+main a
+{
+    font-weight: 800;
+    letter-spacing: -1.75px;
+    text-decoration: underline;
+}
+.flourish
+{
+    font-family: 'Trattatello';
+    font-weight: 400px;
+}
+
+form
+{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: flex-end;
+    gap: 20px;
+}
+form input, textarea, button
+{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+    border: none;
+    background: transparent;
+    resize: none;
+}
+form input, textarea
+{
+    width: 100%;
+    border-bottom: 2px solid var(--flourish-color);
+    font-family: "Neue Machina";
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    color: var(--flourish-color);
+}
+form ::placeholder
+{
+    color: var(--flourish-color);
+    opacity: .5;
+}
+form textarea::-webkit-scrollbar
+{
+    display: none;
+}
+main form button
+{
+    color: var(--flourish-color);
+    font-family: Manrope;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    padding: 10px 20px;
+    border-radius: 33px;
+    border: 2px solid var(--flourish-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main .social-link
+{
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    padding: 0px 15px 0px 0px;
+    align-items: center;
+    border: 2px solid var(--flourish-color);
+    border-radius: 50px;
+    overflow: hidden;
+}
+main .social-link .icon-wrapper
+{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 50px;
+    width: 50px;
+    font-size: 80px;
+    line-height: 80px;
+    overflow: hidden;
+}
+main .social-link .icon-wrapper .envelope
+{
+    margin-right: -10px;
+}
+main .social-link .icon-wrapper .linkedin
+{
+    background-image:url('../images/linkedin-icon.svg');
+    background-repeat: no-repeat;
+    height: 50px;
+    width: 50px;
+}
+main .social-link:active .icon-wrapper .linkedin
+{
+    background-image:url('../images/linkedin-icon-hover.svg');
+}
+main .social-link a
+{
+    font-size: 18px;
+    font-weight: 700;
+    text-decoration-line: underline;
+    letter-spacing: normal;
+}
+.social-link:active, button:active
+{
+    background-color: var(--flourish-color);
+    cursor: pointer;
+}
+.social-link:active a, button:active
+{
+    color: #FFF;
+}
+.social-link:active svg
+{
+    stroke: #FFF;
+}
+.social-link svg-arrow
+{
+    bottom: -3px;
+}
+
+/* FOOTER+HEADER ON ALL DEVICES */
+header a, footer a
+{
+    color: #FFF;
+}
+header, footer
+{
+    width: 100vw;
+}
+footer
+{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+footer a#contact, a#contact
+{
+    color: var(--flourish-color);
+    font-family: Manrope;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    padding: 10px 20px;
+    border-radius: 33px;
+    border: 2px solid var(--flourish-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 25px;
+    text-decoration: none;
+}
+#contact:active, #contact:hover
+{
+    background-color: var(--flourish-color);
+    color: #FFF;
+}
+footer nav
+{
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-color: var(--flourish-color);
+    color: #FFF;
+    gap: 15px;
+}
+footer nav a
+{
+    font-family: "Ibarra Real Nova";
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 200;
+    line-height: normal;
+    color: #FFF;
+    text-decoration: none;
+}
+footer nav a:active
+{
+    color: var(--flourish-color);
+}
+
+/* MOBILE */
+@media only screen
+and (min-device-width: 300px) 
+and (max-device-width: 812px) 
+and (orientation: portrait) { 
+    main
+    {
+        padding: 75px 25px 0px 25px;
+    }
+    main p
+    {
+        margin: 0px;
+    }
+    svg#border
+    {
+        display: none;
+    }
+    #container
+    {
+        border: none;
+    }
+    #contact_container
+    {
+        display: none;
+    }
+}
+
+/* SVG-ARROWS */
+svg-arrow, svg-arrow-down
+{
+    fill: none;
+    stroke-width: 2px;
+    stroke: var(--flourish-color);
+    position: relative;
+    left: 5px;
+    bottom: -5px;
+    margin-right:5px;
+}
+/* DESKTOP */
+@media only screen and (min-device-width: 813px) {
+    footer {
+        display: none;
+    }
+    header
+    {
+        width: 100vw;
+        height: 60px;
+        display: flex;
+        flex-direction: row;
+    }
+    header a
+    {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--flourish-color);
+        text-decoration: none;
+        font-family: 'Manrope';
+        font-size: 20px;
+        font-weight: 700;
+        letter-spacing: -1px;
+    }
+    header a[href="index.html"]
+    {
+        font-family: 'Jacquard 12';
+        font-size: 26px;
+        font-weight: 400;
+    }
+    header a[href="language-revitalization-work.html"]
+    {
+        flex: 1.5;
+    }
+    header a:hover
+    {
+        background-color: #544227;
+    }
+    #frame
+    {
+        width: 100vw;
+        overflow: scroll;
+    }
+    #frame::-webkit-scrollbar
+    {
+        display: none;
+    }
+    svg#border
+    {
+        display: block;
+        position: fixed;
+        bottom: 0px;
+        left: 0px;
+        width: 100vw;
+        z-index: 0;
+    }
+    #container
+    {
+        min-height: 100%;
+        margin: 0px 36px;
+        overflow: hidden;
+        border-left: 3px solid #544227;
+        border-right: 3px solid #544227;
+    }
+    main
+    {
+        width: 60vw;
+        padding: 75px 25px 50px 25px;
+        margin: 0 auto;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 32px;
+        text-align: justify;
+    }
+    h1
+    {
+        font-size: 58px;
+        margin: 25px 0px;
+    }
+    h2
+    {
+        font-size: 48px;
+        margin: 25px 0px;
+    }
+    .flourish
+    {
+        font-size: 32px;
+    }
+    main .social-link .icon-wrapper .linkedin
+    {
+        background-image:url('../images/linkedin-icon-hover.svg');
+    }
+    main .social-link:hover .icon-wrapper .linkedin
+    {
+        background-image:url('../images/linkedin-icon.svg');
+    }
+    .social-link
+    {
+        background-color: var(--flourish-color);
+        cursor: pointer;
+    }
+    .social-link a
+    {
+        color: #FFF
+    }
+    .social-link svg
+    {
+        stroke: #FFF;
+    }
+    .social-link:hover
+    {
+        background-color: transparent;
+        cursor: pointer;
+    }
+    .social-link:hover a
+    {
+        color: var(--flourish-color)
+    }
+    .social-link:hover svg
+    {
+        stroke: var(--flourish-color);
+    }
+
+    #contact_container
+    {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 32px;
+        gap: 10px;
+    }
+    #contact_container a {
+        margin: 0px;
+    }
+}

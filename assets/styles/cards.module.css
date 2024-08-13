@@ -1,0 +1,291 @@
+#cards
+{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    padding-bottom: 25px;
+}
+#cards a
+{
+    text-decoration: none;
+}
+.card
+{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-left: 15px;
+    margin-right: 25px;
+    padding: 10px;
+    border: 2px solid var(--flourish-color);
+    box-shadow: 10px 10px 0px 0px var(--flourish-color);
+    cursor: pointer;
+}
+.card .wrapper
+{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+}
+.card#dissertation .wrapper .icon
+{
+    height: 112px;
+    min-width: 30px;
+    background: url('../images/dissertation.svg');
+    background-repeat: no-repeat;
+    margin-top: -20px;
+}
+.card#presentation .wrapper .icon
+{
+    height: 52px;
+    min-width: 75px;
+    background: url('../images/presentation.svg');
+    background-repeat: no-repeat;
+}
+.card#paper .wrapper .icon
+{
+    height: 85px;
+    min-width: 60px;
+    background: url('../images/paper.svg');
+    background-repeat: no-repeat;
+}
+.card .wrapper .info
+{
+    color: #6E94F5;
+    font-family: "Neue Machina";
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    font-size: 22px;
+}
+.card .wrapper .title
+{
+    font-family: "Ibarra Real Nova";
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: -1.6px;
+    color: #544227;
+    font-size: 32px;
+}
+.card .subtitle
+{
+    font-family: "Ibarra Real Nova";
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    color: #544227;
+    font-size: 26px;
+}
+.card .caption
+{
+    font-family: Manrope;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    color: var(--flourish-color);
+    font-size: 22px;
+}
+.card:active, .card:hover
+{
+    background-color: var(--flourish-color);
+    box-shadow: 10px 10px 0px 0px #544227;
+}
+.card:active *, .card:hover *
+{
+    color: #FFF !important;
+}
+.quote
+{
+    width: 100vw;
+}
+.quote .quote-text
+{
+    background-color: var(--flourish-color);
+    color: #FFF;
+    padding: 30px 20px 30px 20px;
+    font-family: 'Ibarra Real Nova';
+    font-style: normal;
+    font-weight: 400;
+    text-wrap: balance;
+    text-align: justify;
+    font-size: 26px;
+    line-height: 32px;
+}
+.quote .quotation-marks
+{
+    font-family: 'Fondamento';
+    font-style: italic;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 10%;
+    margin-top: 50px;
+    margin-right: 10px;
+    float: left;
+    font-size: 128px;
+}
+.quote .flourish
+{
+    color: #FFF;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 26px;
+    line-height: 32px;
+}
+.quote .horizontal-line-svg
+{
+    background: url('../images/horizontal-line.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 20px;
+    margin-top: 10px;
+}
+.quote .vertical-line-svg
+{
+    background: url('../images/vertical-line.svg');
+    background-repeat: no-repeat;
+    background-position: right;
+    min-height: 110px;
+    min-width: 20px;
+    z-index: 1000;
+    position: relative;
+    top: 35px;
+    right: 50px;
+    margin-top: -90px;
+}
+.ribbon-quote
+{
+    font-family: "Ibarra Real Nova";
+    font-style: normal;
+    font-weight: 400;
+    text-align: center;
+    max-width: 680px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    line-height: 0px;
+    font-size: 26px;
+}
+.ribbon-quote .row-container
+{
+    display: inline-flex;
+}
+.ribbon-quote .row-container:first-child
+{
+    position: relative;
+    bottom: -17px;
+}
+.ribbon-quote .row-container .row
+{
+    background-color: var(--flourish-color);
+    color: #FFF;
+    box-shadow: 5px 5px 0px 0px rgba(0,0,0,.15);
+    height: 38px;
+    z-index: 1;
+    line-height: 38px;
+    vertical-align: center;
+}
+.ribbon-quote .row-container .startrow
+{
+    background: url('../images/startrow.svg');
+    background-repeat: no-repeat;
+    width: 28px;
+    height: 58px;
+    position: relative;
+    top: -15px;
+    right: -5.5px;
+}
+.ribbon-quote .row-container .endrow
+{
+    background: url('../images/endrow.svg');
+    background-repeat: no-repeat;
+    width: 38px;
+    height: 59px;
+    position: relative;
+    left: 0px;
+    z-index: 2;
+}
+.ribbon-quote .body .row-container:first-child .startrow
+{
+    background: url('../images/startflag.svg') !important;
+    background-repeat: no-repeat;
+    width: 45px;
+    height: 76px;
+    position: relative;
+    top: -33px;
+    right: -23px;
+    z-index: 0;
+}
+.ribbon-quote .body .row-container:last-child .endrow
+{
+    background: url('../images/endflag.svg');
+    background-repeat: no-repeat;
+    width: 46px;
+    height: 76px;
+    position: relative;
+    left: -18px;
+    z-index: 2;
+}
+.ribbon-quote .row .flourish
+{
+    color: #FFF;
+}
+/* DESKTOP */
+@media only screen and (min-device-width: 813px) {
+    #cards
+    {
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 80vw;
+        margin: 0 auto;
+        justify-content: space-between;
+        align-items: center;
+
+    }
+    .card
+    {
+        width: 290px;
+    }
+    .card .wrapper .info
+    {
+        font-size: 16px;
+    }
+    .card .wrapper .title
+    {
+        font-size: 24px;
+    }
+    .card .subtitle
+    {
+        font-size: 20px;
+    }
+    .card .caption
+    {
+        font-size: 18px;
+    }
+    .quote
+    {
+        width: 290px;
+    }
+    .quote .quote-text, .quote .flourish
+    {
+        font-size: 20px;
+        line-height: 20px;
+    }
+    .quote .horizontal-line-svg
+    {
+        display: none;
+    }
+    .quote .vertical-line-svg
+    {
+        transform: rotate(-90deg);
+        -webkit-transform: rotate(-90deg);
+        left: -165px;
+        top: 210px;
+    }
+    .ribbon-quote
+    {
+        font-size: 22px;
+        width: 600px;
+    }
+}

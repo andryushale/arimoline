@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width" />
+        <link rel="icon" href="favicon.png">
+        <title>Ari Moline | Home</title>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova:ital,wght@0,400..700;1,400..700&family=Jacquard+12&family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+
+        <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="assets/styles/universal.css" />
+        <style type="text/css">
+            :root
+            {
+                --flourish-color: #3A9C66;
+                --periwinkle: #6E94F5;
+            }
+
+            ::selection {
+                color: var(--periwinkle);
+                background: #FFF;
+            }
+            /* MOBILE */
+            @media only screen
+                and (min-device-width: 300px) 
+                and (max-device-width: 812px) 
+                and (orientation: portrait) { 
+
+                    header, #desktop_nav {
+                        display: none;
+                    }
+                    body, main, footer
+                    {
+                        width: 100%;
+                    }
+                    body
+                    {
+                        display: flex;
+                        flex-direction: column;
+                        min-height: 100vh;
+                    }
+                    h1
+                    {
+                        font-size: 58px;
+                        margin: 25px 0px;
+                    }
+                    h2
+                    {
+                        font-size: 48px;
+                        margin: 25px 0px;
+                    }
+                    main
+                    {
+                        padding: 75px 25px 50px 25px;
+                        font-size: 28px;
+                        font-weight: 400;
+                        line-height: 45px;
+                        
+                        display: flex;
+                        flex-direction: column;
+                        flex: 1;
+                    }
+                    main .flourish
+                    {
+                        font-family: 'Trattatello';
+                        font-size: 36px;
+                        font-weight: 400;
+                        line-height: 45px;
+                    }
+                    main a
+                    {
+                        font-size: 32px;
+                        display: block;
+                        font-weight: 800;
+                        letter-spacing: -2.25px;
+                        text-decoration: underline;
+                    }
+                    footer
+                    {
+                        padding: 25px;
+                        font-size: 48px;
+                    }
+                    footer a
+                    {
+                        font-family: 'Jacquard 12';
+                        color: #FFF;
+                        text-decoration: underline;
+                    }
+
+            }
+            /* DESKTOP */
+            @media only screen and (min-device-width: 813px) {
+                footer, #mobile_nav {
+                    display: none;
+                }
+                header a
+                {
+                    background-color: #9CA013;
+                }
+                #container
+                {
+                    display: flex;
+                }
+                #container_bg
+                {
+                    background: url('assets/images/motif.jpg');
+                    background-size: cover;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    flex: 1;
+                }
+                main
+                {
+                    width: 50vw;
+                    padding: 25px;
+                    margin: 50px;
+                    float: right;
+                    position: relative;
+                    z-index: 1;
+                    background-color: var(--periwinkle);
+                    color: #FFF;
+                    font-size: 22px;
+                }
+                main .flourish
+                {
+                    color: #FFF;
+                    font-size: 24px;
+                }
+                main h1
+                {
+                    font-size: 40px;
+                }
+                #desktop_nav
+                {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: flex-end;
+                    align-items: center;
+                }
+                #desktop_nav a
+                {
+                    color: #FFF;
+                    border-color: #FFF;
+                    font-size: 18px;
+                    font-weight: normal;
+                    letter-spacing: normal;
+                    text-decoration: none;
+                }
+                #desktop_nav a#contact:hover
+                {
+                    color: var(--periwinkle);
+                    background-color: #FFF;
+                }
+                #desktop_nav button
+                {
+                    color: inherit;
+                    font-size: inherit;
+                    font-family: inherit;
+                    cursor: inherit;
+                }
+                #desktop_nav button:active
+                {
+                    background-color: #FFF;
+                    color: var(--periwinkle);
+                }
+                #desktop_nav .social-link
+                {
+                    background-color: var(--periwinkle);
+                    border: 2px solid #FFF;
+                }
+                #desktop_nav .social-link .icon-wrapper
+                {
+                    margin-left: -.5px;
+                }
+                #desktop_nav .social-link:hover
+                {
+                    background-color: #FFF;
+                    color: var(--periwinkle);
+                    border: 2px solid #FFF;
+                }
+                #desktop_nav .social-link:hover a
+                {
+                    color: var(--periwinkle);
+                }
+                #desktop_nav .social-link:hover svg
+                {
+                    stroke: var(--periwinkle);
+                }
+                #desktop_nav .social-link:hover .icon-wrapper .linkedin
+                {
+                    background-image:url('assets/images/linkedin-icon-hover-periwinkle.svg');
+                }
+                #desktop_nav .label a
+                {
+                    font-weight: normal;
+                }
+                #nameplate
+                {
+                    position: fixed;
+                    bottom: 0px;
+                    left: 0px;
+                    font-family: "Jacquard 12";
+                    font-size: 65vh;
+                    font-weight: 400;
+                    line-height: 40vh;
+                    letter-spacing: -1.5vw;
+                    -webkit-text-stroke: 3px var(--periwinkle);
+                    user-select: none;
+                    -webkit-user-select: none;
+                    color: transparent;
+                    z-index: 0;
+                }
+            }
+        </style>
+
+    <!-- svg arrow -->
+    <script type="text/javascript" src="assets/scripts/svgart.js"></script>
+    </head>
+    <body>
+        <svg id="border" xmlns="http://www.w3.org/2000/svg">
+            <path style="fill:none;stroke:#544227;stroke-width:3" />
+        </svg>
+        <header>
+            <a href="index.html">Ari Moline</a>
+            <a href="contact.html">Contact</a>
+            <a href="academic-work.html">Academic Work</a>
+            <a href="language-revitalization-work.html">Language Revitalization Work</a>
+            <a href="writing-and-creative-work.html">Writing & Creative</a>
+        </header>
+        <div id="frame">
+            <div id="container">
+                <div id="nameplate">Ari <br/>&nbsp;&nbsp;&nbsp;Moline</div>
+                <div id="container_bg">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="529" height="235" viewBox="0 0 529 235" fill="none">
+                        <path d="M1 233.5H10.5C18.7843 233.5 25.5 226.784 25.5 218.5V16.5C25.5 8.21573 18.7843 1.5 10.5 1.5H1V1.5C1 16.964 13.536 29.5 29 29.5H499.5C514.964 29.5 527.5 16.964 527.5 1.5V1.5H516C507.716 1.5 501 8.21573 501 16.5V218.5C501 226.784 507.716 233.5 516 233.5H527.5V233.5C527.5 220.797 517.203 210.5 504.5 210.5H24C11.2975 210.5 1 220.797 1 233.5V233.5Z" stroke="white" stroke-width="2"/>
+                      </svg>
+                    <main>
+                        <div id="blurb">
+                            <h1>Ari Moline</h1>
+                            <p>I’m a <span class="flourish">writer</span> and <span class="flourish">applied linguist</span>. I organize my world by asking what language can do, and what’s <span class="flourish">beyond</span> it.</p>
+                        </div>
+                        <div id="mobile_nav">
+                            <h2>What I do</h2>
+                            <a href="academic-work.html">Academic Work <svg-arrow></svg-arrow></a>
+                            <a href="language-revitalization-work.html">Language Revitalization Work <svg-arrow></svg-arrow></a>
+                            <a href="writing-and-creative-work.html">Writing & Creative <svg-arrow></svg-arrow></a>
+                        </div>
+                        <div id="desktop_nav">
+                            <a href="contact.html" id="contact"><button>Contact me ></button></a>
+                            <a href="https://www.linkedin.com/in/ari-moline" target="_blank" >
+                                <div class="social-link">
+                                    <div class="icon-wrapper">
+                                        <div class="icon linkedin"></div>
+                                    </div>
+                                    <div class="label">
+                                        LinkedIn <svg-arrow></svg-arrow>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </main>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <nav>
+                <a href="contact.html" id="contact">Contact > 💌</a>
+            </nav>
+        </footer>
+    </body>
+</html>

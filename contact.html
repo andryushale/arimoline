@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width" />
+        <link rel="icon" href="favicon.png">
+        <title>Ari Moline | Contact</title>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova:ital,wght@0,400..700;1,400..700&family=Jacquard+12&family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+
+        <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+        <script type="text/javascript" src="assets/scripts/linkhider.js" defer></script>
+
+        <script type="text/javascript">
+            $(document).ready(function(e){
+                $(`a[href='#contact_form']`).click(function(){
+                $('html, body').animate({
+                   scrollTop: $('#contact_form').offset().top
+                }, 500);
+            });
+        });
+        </script>
+        <link rel="stylesheet" type="text/css" href="assets/styles/universal.css" />
+        <style type="text/css">
+            :root
+            {
+                --flourish-color: #8E3F4E;
+            }
+            /* MOBILE */
+            @media only screen
+                and (min-device-width: 300px) 
+                and (max-device-width: 812px) 
+                and (orientation: portrait) { 
+
+                    header, #desktop_social_links {
+                        display: none;
+                    }
+                    body, main, footer
+                    {
+                        width: 100%;
+                    }
+                    body
+                    {
+                        display: flex;
+                        flex-direction: column;
+                        min-height: 100vh;
+                    }
+                    #columns_container
+                    {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 50px;
+                    }
+                    h1
+                    {
+                        font-size: 58px;
+                        margin: 25px 0px;
+                    }
+                    h2
+                    {
+                        font-size: 48px;
+                        margin: 25px 0px;
+                    }
+                    main
+                    {
+                        font-size: 32px;
+                        padding: 75px 25px 25px 25px;
+                        font-weight: 400;
+                        line-height: 45px;
+                        
+                        display: flex;
+                        flex-direction: column;
+                        flex: 1;
+                    }
+                    main .flourish
+                    {
+                        font-family: 'Trattatello';
+                        font-size: 36px;
+                        font-weight: 400;
+                        line-height: 45px;
+                    }
+                    main #social-links
+                    {
+                        display: flex;
+                        flex-direction: row;
+                        gap: 20px;
+                    }
+                    form
+                    {
+                        margin-top: 35px;
+                    }
+                    input, textarea
+                    {
+                        font-size: 32px;
+                    }
+                    footer a#contact
+                    {
+                        display: none;
+                    }
+            }
+            /* DESKTOP */
+            @media only screen and (min-device-width: 813px) {
+                footer, #social-links {
+                    display: none;
+                }
+                #columns_container
+                {
+                    display: flex;
+                    flex-direction: row;
+                    gap: 50px;
+                }
+                main
+                {
+                    width: 80vw;
+                }
+                main .social-link
+                {
+                    display: inline-flex;
+                }
+                form
+                {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 30px;
+                }
+                input, textarea
+                {
+                    font-size: 22px;
+                }
+                button:hover
+                {
+                    background-color: var(--flourish-color);
+                    color: #FFF;
+                    cursor: pointer;
+                }
+            }
+        </style>
+        <!-- svg arrows -->
+        <script type="text/javascript" src="assets/scripts/svgart.js"></script>
+        <style type="text/css">
+           .social-link svg-arrow-down
+            {
+                bottom: 0px;
+            }
+        </style>
+    </head>
+    <body>
+        <svg id="border" xmlns="http://www.w3.org/2000/svg">
+            <path style="fill:none;stroke:#544227;stroke-width:3" />
+        </svg>
+        <header>
+            <a href="index.html">Ari Moline</a>
+            <a href="contact.html">Contact</a>
+            <a href="academic-work.html">Academic Work</a>
+            <a href="language-revitalization-work.html">Language Revitalization Work</a>
+            <a href="writing-and-creative-work.html">Writing & Creative</a>
+        </header>
+        <div id="frame"> 
+            <div id="container">
+                <main>
+                    <h1>Contact</h1>
+                    <div id="columns_container">
+                        <div id="social-links">
+                            <div class="social-link">
+                                <div class="icon-wrapper">
+                                    <div class="icon envelope">💌</div>
+                                </div>
+                                <div class="label">
+                                    <a href="#contact_form">Email<svg-arrow-down></svg-arrow-down></a>
+                                </div>
+                            </div>
+    
+                            <div class="social-link">
+                                <div class="icon-wrapper">
+                                    <div class="icon linkedin"></div>
+                                </div>
+                                <div class="label">
+                                    <a href="https://www.linkedin.com/in/ari-moline" target="_blank">LinkedIn <svg-arrow></svg-arrow></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="blurb">
+                            <p>Talk to me about <span class="flourish">opportunities to collaborate</span> on language teaching. Or send my any other questions or <span class="flourish">musings</span>. I love creative collaboration of all kinds.</p>
+                            <p>I’d also love to talk to you about <span class="flourish">Jewish mysticism</span>, making and experiencing <span class="flourish">scents</span>, and the words you want to see in a liberatory future-now.</p>
+
+                            <div id="desktop_social_links">
+                                <h2>Find me online</h2>
+                                <div class="social-link">
+                                    <div class="icon-wrapper">
+                                        <div class="icon linkedin"></div>
+                                    </div>
+                                    <div class="label">
+                                        <a href="https://www.linkedin.com/in/ari-moline" target="_blank">LinkedIn <svg-arrow></svg-arrow></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <p>Email me directly at <a href="mailto:hi@moline.com">hi@moline.com <svg-arrow></svg-arrow></a> or fill out the form below:</p>
+                            <form id="contact_form" action="#">
+                                <input type="text" placeholder="Your name"/>
+                                <input type="email" placeholder="Your email address"/>
+                                <textarea placeholder="Your message" oninput="this.style.height = '';this.style.height = this.scrollHeight + 'px'"></textarea>
+                                <button>Send ></button>
+                            </form>
+                        </div>
+                    </div>
+                </main>
+            </div>
+        </div>
+        <footer>
+            <a href="contact.html" id="contact">Get in touch ></a>
+            <nav>
+                <a href="index.html">+ Home</a>
+                <a href="academic-work.html">+ Academic Work</a>
+                <a href="language-revitalization-work.html">+ Language Revitalization Work</a>
+                <a href="writing-and-creative-work.html">+ Writing & Creative</a>
+            </nav>
+        </footer>
+    </body>
+</html>
