@@ -199,11 +199,11 @@
                         </div>
                         <div>
                             <p>Email me directly at <a href="mailto:hi@moline.com">hi@moline.com <svg-arrow></svg-arrow></a> or fill out the form below:</p>
-                            <form id="contact_form" action="#">
+                            <form id="contact_form" action="https://formspree.io/f/xpwayear" method="POST">
                                 <input type="text" placeholder="Your name"/>
-                                <input type="email" placeholder="Your email address"/>
-                                <textarea placeholder="Your message" oninput="this.style.height = '';this.style.height = this.scrollHeight + 'px'"></textarea>
-                                <button>Send ></button>
+                                <input type="email" name="email" placeholder="Your email address"/>
+                                <textarea placeholder="Your message" name="message" oninput="this.style.height = '';this.style.height = this.scrollHeight + 'px'"></textarea>
+                                <button type="submit">Send ></button>
                             </form>
                         </div>
                     </div>
