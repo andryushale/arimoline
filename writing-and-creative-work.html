@@ -13,6 +13,7 @@
         <script src="https://code.jquery.com/jquery-latest.min.js"></script>
         <script type="text/javascript" src="assets/scripts/linkhider.js" defer></script>
         <script type="text/javascript" src="assets/scripts/svgart.js"></script>
+        <script src="assets/scripts/creativeanimations.mjs" type="module" defer></script>
         
         <link rel="stylesheet" type="text/css" href="assets/styles/universal.css" />
         <style type="text/css">
@@ -123,8 +124,73 @@
             }
             /* DESKTOP */
             @media only screen and (min-device-width: 813px) {
-                footer {
+                footer, #works {
                     display: none;
+                }
+                #sample
+                {
+                    position: absolute;
+                    top: 60px;
+                    left: 0px;
+                    width: 75vw;
+
+                    font-family: "Manrope";
+                    font-size: 3vw;
+                    font-weight: 400;
+                    line-height: 3vw;
+
+                    user-select: none;
+                    -webkit-user-select: none;
+
+                    color: var(--flourish-color);
+                    text-align: left;
+                }
+                #sample div#chapter
+                {
+                    /* min-height: calc(100vh - 60px); */
+                    margin: 100px 50px;
+                }
+                #sample p
+                {
+                    margin: 0px;
+                    display: inline-block;
+                }
+                #sample p.justify
+                {
+                    text-align: justify;
+                }
+                #sample p.last-right
+                {
+                    /* text-align-last: right; */
+                }
+                #sample .split
+                {
+                    display: inline;
+                }
+                #sample .underline
+                {
+                    width: 10vw;
+                    height: 3vw;
+                    display: inline-block;
+                    position: relative;
+                    bottom: -10px;
+                    border: 1px solid var(--flourish-color);
+                    border-bottom: 5px solid var(--flourish-color);
+                    z-index: -1;
+                }
+                #sample .spacer
+                {
+                    display: flex;
+                    flex-direction: row;
+                    width: 75vw;
+                    justify-content: space-between;
+
+                }
+                #sample .char1, #sample.char5, #sample .char12
+                {
+                    font-family: "Neue Machina";
+                    font-size: 4.5vw;
+                    line-height: 3vw;
                 }
             }
         </style>
@@ -137,62 +203,139 @@
             <a href="language-revitalization-work.html">Language Revitalization Work</a>
             <a href="writing-and-creative-work.html">Writing & Creative</a>
         </header>
-        <main>
-            <h1>Writing & Creative</h1>
-            <p>In my writing practice, I’m interested in exploring <span class="flourish">another way</span> language passes through the <span class="flourish">body</span>. I’m curious about <span class="flourish">words of worlds</span> that speak to emotional clarity and situational opacity, relational threads <span class="flourish">weaving</span> and <span class="flourish">unweaving</span>. I also am a dilettante of <span class="flourish">scent art</span>, and love it for its inherent properties of subjectivity and its elemental and time-based nature.</p>
 
-            <article id="projects">
-                <h2>Poetry & Zines</h2>
-                <a href="" target="_blank">
-                    <div class="project-img-container">
-                        <div class="project-img">
-                            <img src="assets/images/duals.png"/>
-                            <div class="project">
-                                <div class="year">2023</div>
-                                <span class="title">DUALS</span>
+        <article id="sample">
+            <!-- SCREEN ONE -->
+            <div id="chapter">
+                <p>
+                    I unfolded a sentence
+                    <br/><span id="split-and" class="split">and </span><span class="underline underline-one"> </span><span id="split-fell-out" class="split"> fell out.</span>
+                </p>
+                <p style="text-align:right;margin-top:20px;float:right;margin-bottom:200px;">
+                    <span class="underline underline-two"> </span><span class="split" id="split-had-acetone"> had a dry slipperiness to it,
+                    <br/> a cool breath of acetone.</span>
+                </p>
+            </div>
+            <div id="chapter">
+                <p style="float:right;text-align:right;margin-bottom:200px;">
+                    <span id="split-i-so" class="split">I have often wondered, to dissatisfaction:
+                    <br/>Why am I like this? So </span><span class="underline underline-three"> </span><span id="split-like" class="split">-like?</span>
+                </p>
+            </div>
+            <!-- SCREEN TWO -->
+            <div id="chapter">
+                <p>
+                    The motion of the <span class="underline"> </span> gave me some idea.
+                    <br/>   <span class="spacer">
+                        <span>It was both of the words</span>
+                        <span>and not.</span>
+                    </span>
+                    <span class="spacer">
+                        <span>It was of my mind</span>
+                        <span>and very, very not.</span>
+                    </span>
+                </p>
+            </div>
+            <div id="chapter">
+                <p class="justify">
+                    It smelled like my grandfather’s belly, my grandmother’s frying pan, the Denny’s creamers, the sweet barely-dry ink.
+                </p>
+            </div>
+            <div id="chapter">
+                <p>
+                    <span class="underline"> </span> slithered and folded up.
+                    <br/>It decided to go back.
+                </p>
+            </div>
+            <div id="chapter">
+                <p>
+                    <span class="spacer">
+                        <span>I wanted it to stay</span>
+                        <span>and also</span>
+                    </span>
+                    I was afraid of it staying too long in this world.
+                </p>
+            </div>
+            <div id="chapter">
+                <p class="last-right">
+                    <span class="underline"> </span> rebraided itself
+                    <br/>back out from the unknot. 
+                </p>
+            </div>
+            <div id="chapter">
+                <p>
+                    <span class="underline"> </span> went back into the words.
+                </p>  
+            </div>
+            <div id="chapter">   
+                <p class="justify">
+                    I watched it fade away
+                    <span class="spacer">
+                        <span>and then</span>
+                        <span>I forgot how it had felt.</span>
+                    </span>
+                </p>
+            </div>
+        </article>
+
+        <main>
+            <article id="works">
+                <h1>Writing & Creative</h1>
+                <p>In my writing practice, I’m interested in exploring <span class="flourish">another way</span> language passes through the <span class="flourish">body</span>. I’m curious about <span class="flourish">words of worlds</span> that speak to emotional clarity and situational opacity, relational threads <span class="flourish">weaving</span> and <span class="flourish">unweaving</span>. I also am a dilettante of <span class="flourish">scent art</span>, and love it for its inherent properties of subjectivity and its elemental and time-based nature.</p>
+
+                <article id="projects">
+                    <h2>Poetry & Zines</h2>
+                    <a href="" target="_blank">
+                        <div class="project-img-container">
+                            <div class="project-img">
+                                <img src="assets/images/duals.png"/>
+                                <div class="project">
+                                    <div class="year">2023</div>
+                                    <span class="title">DUALS</span>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </a>
-                <a href="" target="_blank">
-                    <div class="project-img-container">
-                        <div class="project-img">
-                            <img src="assets/images/a-bonfire-wont-help.png"/>
-                            <div class="project">
-                                <span class="year">2023</span> <span class="title">A Bonfire Won't Help</span>
+                    </a>
+                    <a href="" target="_blank">
+                        <div class="project-img-container">
+                            <div class="project-img">
+                                <img src="assets/images/a-bonfire-wont-help.png"/>
+                                <div class="project">
+                                    <span class="year">2023</span> <span class="title">A Bonfire Won't Help</span>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </a>
-                <a href="" target="_blank">
-                    <div class="project">
-                        2023 <span class="title">Sonnet In Which I Disclose My Wifi Password</span> <span class="publication">HAD Magazine</span>
-                    </div>
-                </a>
-                <a href="" target="_blank">
-                    <div class="project">
-                        2022 <span class="title">Theology of Moods</span> <span class="publication">Guesthouse Lit</span>
-                    </div>
-                </a>
-                <a href="" target="_blank">
-                    <div class="project">
-                        2021 <span class="title">My Summer Station</span> & <span class="title">The Garden</span><span class="publication">Everything in Aspic</span>
-                    </div>
-                </a>
-                <h2>Scents</h2>
-                <a href="" target="_blank">
-                    <div class="project-img-container">
-                        <div class="project-img">
-                            <img src="assets/images/fire-in-the-valley.png"/>
-                            <div class="project">
-                                <div class="year">2023</div>
-                                <span class="title">Fire in the Valley</span>
-                                <p>
-                            </div>
+                    </a>
+                    <a href="" target="_blank">
+                        <div class="project">
+                            2023 <span class="title">Sonnet In Which I Disclose My Wifi Password</span> <span class="publication">HAD Magazine</span>
                         </div>
-                        <div class="caption"><i>Natural perfume of wild prairie longing. Notes of white sage, campfire-smoked leather, angelica root and oakmoss.</i></div>
-                    </div>
-                </a>
+                    </a>
+                    <a href="" target="_blank">
+                        <div class="project">
+                            2022 <span class="title">Theology of Moods</span> <span class="publication">Guesthouse Lit</span>
+                        </div>
+                    </a>
+                    <a href="" target="_blank">
+                        <div class="project">
+                            2021 <span class="title">My Summer Station</span> & <span class="title">The Garden</span><span class="publication">Everything in Aspic</span>
+                        </div>
+                    </a>
+                    <h2>Scents</h2>
+                    <a href="" target="_blank">
+                        <div class="project-img-container">
+                            <div class="project-img">
+                                <img src="assets/images/fire-in-the-valley.png"/>
+                                <div class="project">
+                                    <div class="year">2023</div>
+                                    <span class="title">Fire in the Valley</span>
+                                    <p>
+                                </div>
+                            </div>
+                            <div class="caption"><i>Natural perfume of wild prairie longing. Notes of white sage, campfire-smoked leather, angelica root and oakmoss.</i></div>
+                        </div>
+                    </a>
+                </article>
             </article>
         </main>
         <footer>

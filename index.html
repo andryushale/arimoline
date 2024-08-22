@@ -11,6 +11,8 @@
         <link href="https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova:ital,wght@0,400..700;1,400..700&family=Jacquard+12&family=Manrope:wght@200..800&display=swap" rel="stylesheet">
 
         <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+        <script src="assets/scripts/animations.mjs" type="module" defer></script>
+
         <link rel="stylesheet" type="text/css" href="assets/styles/universal.css" />
         <style type="text/css">
             :root
@@ -29,7 +31,7 @@
                 and (max-device-width: 812px) 
                 and (orientation: portrait) { 
 
-                    header, #desktop_nav {
+                    header, #desktop_nav, #nameplate {
                         display: none;
                     }
                     body, main, footer
@@ -93,7 +95,8 @@
             }
             /* DESKTOP */
             @media only screen and (min-device-width: 813px) {
-                footer, #mobile_nav {
+                footer, #mobile_nav
+                {
                     display: none;
                 }
                 header a
@@ -114,10 +117,9 @@
                 }
                 main
                 {
-                    width: 50vw;
+                    width: 20vw;
                     padding: 25px;
                     margin: 50px;
-                    float: right;
                     position: relative;
                     z-index: 1;
                     background-color: var(--periwinkle);
@@ -133,10 +135,15 @@
                 {
                     font-size: 40px;
                 }
+                #blurb p, #blurb .flourish
+                {
+                    font-size: 22px;
+                    font-family: 'Manrope';
+                }
                 #desktop_nav
                 {
                     display: flex;
-                    flex-direction: row;
+                    flex-direction: column;
                     justify-content: flex-end;
                     align-items: center;
                 }
@@ -144,10 +151,12 @@
                 {
                     color: #FFF;
                     border-color: #FFF;
+                    background-color: var(--periwinkle);
                     font-size: 18px;
                     font-weight: normal;
                     letter-spacing: normal;
                     text-decoration: none;
+                    border-radius: 50px;
                 }
                 #desktop_nav a#contact:hover
                 {
@@ -202,16 +211,43 @@
                     position: fixed;
                     bottom: 0px;
                     left: 0px;
-                    font-family: "Jacquard 12";
-                    font-size: 65vh;
+                    font-family: "Trattatello", "Times New Roman";
+                    font-size: 35vh;
                     font-weight: 400;
-                    line-height: 40vh;
-                    letter-spacing: -1.5vw;
-                    -webkit-text-stroke: 3px var(--periwinkle);
+                    line-height: 25vh;
+                    letter-spacing: 3vw;
+                    -webkit-text-stroke: 5px var(--periwinkle);
                     user-select: none;
                     -webkit-user-select: none;
                     color: transparent;
                     z-index: 0;
+                }
+                #nameplate .special
+                {
+                    font-family: 'Times New Roman';
+                    font-style: italic;
+                }
+                #nameplate .bold
+                {
+                    font-family: 'Times New Roman';
+                    font-weight: bold;
+                }
+                #nameplate .japanese
+                {
+                    font-family: 'Hiragino Sans';
+                    font-weight: 900;
+                }
+                #nameplate .arabic
+                {
+                    font-family: 'Waseem';
+                }
+                #nameplate .animationFinished
+                {
+                    font-family: "Jacquard 12", "Neue Machina", monospace;
+                    -webkit-text-stroke: 3px var(--periwinkle);
+                    letter-spacing: -1.5vw;
+                    font-size: 65vh;
+                    line-height: 40vh;
                 }
             }
         </style>
@@ -232,11 +268,11 @@
         </header>
         <div id="frame">
             <div id="container">
-                <div id="nameplate">Ari <br/>&nbsp;&nbsp;&nbsp;Moline</div>
+                <div id="nameplate"><span class="bold">א</span>&ю<span class="special">è</span>Ñ</span><br/><span class="arabic">ت</span><span class="japanese">ヱ</span>Жẃ<span class="special">è</span>Ñ</span></div>
                 <div id="container_bg">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="529" height="235" viewBox="0 0 529 235" fill="none">
+                    <!-- <svg xmlns="http://www.w3.org/2000/svg" width="529" height="235" viewBox="0 0 529 235" fill="none">
                         <path d="M1 233.5H10.5C18.7843 233.5 25.5 226.784 25.5 218.5V16.5C25.5 8.21573 18.7843 1.5 10.5 1.5H1V1.5C1 16.964 13.536 29.5 29 29.5H499.5C514.964 29.5 527.5 16.964 527.5 1.5V1.5H516C507.716 1.5 501 8.21573 501 16.5V218.5C501 226.784 507.716 233.5 516 233.5H527.5V233.5C527.5 220.797 517.203 210.5 504.5 210.5H24C11.2975 210.5 1 220.797 1 233.5V233.5Z" stroke="white" stroke-width="2"/>
-                      </svg>
+                      </svg> -->
                     <main>
                         <div id="blurb">
                             <h1>Ari Moline</h1>

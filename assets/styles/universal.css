@@ -1,10 +1,14 @@
 @font-face {
     font-family: 'Trattatello';
-    src: url('assets/fonts/Trattatello.ttf'); 
+    src: url('../fonts/Trattatello.ttf'); 
 }
 @font-face {
     font-family: 'Neue Machina';
-    src: url('assets/fonts/NeueMachina.otf'); 
+    src: url('../fonts/NeueMachina.otf'); 
+}
+@font-face {
+    font-family: 'Waseem';
+    src: url('../fonts/Waseem.ttc'); 
 }
 
 /* ALL DEVICES*/
@@ -26,6 +30,11 @@ h1, h2, header:first-child
 {
     font-family: 'Jacquard 12';
     font-weight: normal;
+}
+header
+{
+    z-index: 100;
+    position: relative;
 }
 h1
 {
@@ -273,6 +282,9 @@ svg-arrow, svg-arrow-down
         height: 60px;
         display: flex;
         flex-direction: row;
+        position: fixed;
+        top: 0px;
+        left: 0px;
     }
     header a
     {
@@ -299,10 +311,12 @@ svg-arrow, svg-arrow-down
     }
     header a:hover
     {
-        background-color: #544227;
+        text-decoration: underline;
     }
     #frame
     {
+        position: absolute;
+        top: 60px;
         width: 100vw;
         overflow: scroll;
     }
@@ -326,6 +340,12 @@ svg-arrow, svg-arrow-down
         overflow: hidden;
         border-left: 3px solid #544227;
         border-right: 3px solid #544227;
+    }
+    #container_bg
+    {
+        display: flex;
+        justify-content: end;
+        align-items: center;
     }
     main
     {
