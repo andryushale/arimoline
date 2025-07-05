@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width" />
-        <link rel="icon" href="favicon.png">
+        <link rel="icon" href="assets/images/favicon-16.png">
         <title>Ari Moline | Home</title>
 
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -11,9 +11,11 @@
         <link href="https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova:ital,wght@0,400..700;1,400..700&family=Jacquard+12&family=Manrope:wght@200..800&display=swap" rel="stylesheet">
 
         <script src="https://code.jquery.com/jquery-latest.min.js"></script>
-        <script src="assets/scripts/animations.mjs" type="module" defer></script>
 
         <link rel="stylesheet" type="text/css" href="assets/styles/universal.css" />
+        <link rel="stylesheet" type="text/css" href="assets/styles/nameplate.css" />
+        <script type="text/javascript" src="assets/scripts/svgart.js"></script>
+        <script type="text/javascript" src="assets/scripts/nameplate.js"></script>
         <style type="text/css">
             :root
             {
@@ -56,7 +58,7 @@
                     }
                     main
                     {
-                        padding: 75px 25px 50px 25px;
+                        padding: 25px;
                         font-size: 28px;
                         font-weight: 400;
                         line-height: 45px;
@@ -80,16 +82,17 @@
                         letter-spacing: -2.25px;
                         text-decoration: underline;
                     }
-                    footer
+                    footer nav
                     {
-                        padding: 25px;
-                        font-size: 48px;
+                        width: 100%;
                     }
                     footer a
                     {
-                        font-family: 'Jacquard 12';
-                        color: #FFF;
-                        text-decoration: underline;
+                        font-family: 'Jacquard 12' !important;
+                        color: #FFF !important;
+                        font-size: 10vw !important;
+                        text-decoration: underline !important;
+                        padding-left: 60px !important;
                     }
 
             }
@@ -114,17 +117,24 @@
                     background-position: center;
                     background-repeat: no-repeat;
                     flex: 1;
+                    display: flex;
+                    align-items: flex-start;
+                    justify-content: flex-start;
+                    z-index: 1;
                 }
                 main
                 {
                     width: 20vw;
                     padding: 25px;
-                    margin: 50px;
-                    position: relative;
+                    margin: 50px 200px;
                     z-index: 1;
                     background-color: var(--periwinkle);
                     color: #FFF;
                     font-size: 22px;
+                }
+                main h2
+                {
+                    display: none;
                 }
                 main .flourish
                 {
@@ -135,125 +145,32 @@
                 {
                     font-size: 40px;
                 }
-                #blurb p, #blurb .flourish
+                main::before, #blurb::after
                 {
-                    font-size: 22px;
-                    font-family: 'Manrope';
-                }
-                #desktop_nav
-                {
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: flex-end;
+                    content: '◆';
+                    display: inline-flex;
                     align-items: center;
+                    height: 2vw;
                 }
-                #desktop_nav a
+                main::before
                 {
-                    color: #FFF;
-                    border-color: #FFF;
-                    background-color: var(--periwinkle);
-                    font-size: 18px;
-                    font-weight: normal;
-                    letter-spacing: normal;
-                    text-decoration: none;
-                    border-radius: 50px;
+                    float: left;
+                    margin-right: 10px;
                 }
-                #desktop_nav a#contact:hover
+                #blurb::after
                 {
-                    color: var(--periwinkle);
-                    background-color: #FFF;
+                    float:right;
+                    margin-left: 10px;
                 }
-                #desktop_nav button
+                #blurb, #blurb .flourish
                 {
-                    color: inherit;
-                    font-size: inherit;
-                    font-family: inherit;
-                    cursor: inherit;
-                }
-                #desktop_nav button:active
-                {
-                    background-color: #FFF;
-                    color: var(--periwinkle);
-                }
-                #desktop_nav .social-link
-                {
-                    background-color: var(--periwinkle);
-                    border: 2px solid #FFF;
-                }
-                #desktop_nav .social-link .icon-wrapper
-                {
-                    margin-left: -.5px;
-                }
-                #desktop_nav .social-link:hover
-                {
-                    background-color: #FFF;
-                    color: var(--periwinkle);
-                    border: 2px solid #FFF;
-                }
-                #desktop_nav .social-link:hover a
-                {
-                    color: var(--periwinkle);
-                }
-                #desktop_nav .social-link:hover svg
-                {
-                    stroke: var(--periwinkle);
-                }
-                #desktop_nav .social-link:hover .icon-wrapper .linkedin
-                {
-                    background-image:url('assets/images/linkedin-icon-hover-periwinkle.svg');
-                }
-                #desktop_nav .label a
-                {
-                    font-weight: normal;
-                }
-                #nameplate
-                {
-                    position: fixed;
-                    bottom: 0px;
-                    left: 0px;
-                    font-family: "Trattatello", "Times New Roman";
-                    font-size: 35vh;
-                    font-weight: 400;
-                    line-height: 25vh;
-                    letter-spacing: 3vw;
-                    -webkit-text-stroke: 5px var(--periwinkle);
-                    user-select: none;
-                    -webkit-user-select: none;
-                    color: transparent;
-                    z-index: 0;
-                }
-                #nameplate .special
-                {
-                    font-family: 'Times New Roman';
-                    font-style: italic;
-                }
-                #nameplate .bold
-                {
-                    font-family: 'Times New Roman';
-                    font-weight: bold;
-                }
-                #nameplate .japanese
-                {
-                    font-family: 'Hiragino Sans';
-                    font-weight: 900;
-                }
-                #nameplate .arabic
-                {
-                    font-family: 'Waseem';
-                }
-                #nameplate .animationFinished
-                {
-                    font-family: "Jacquard 12", "Neue Machina", monospace;
-                    -webkit-text-stroke: 3px var(--periwinkle);
-                    letter-spacing: -1.5vw;
-                    font-size: 65vh;
-                    line-height: 40vh;
+                    font-size: 2vw;
+                    line-height: 2vw;
+                    font-family: 'Manrope';
+                    text-align: justify;
                 }
             }
         </style>
-
-    <!-- svg arrow -->
-    <script type="text/javascript" src="assets/scripts/svgart.js"></script>
     </head>
     <body>
         <svg id="border" xmlns="http://www.w3.org/2000/svg">
@@ -262,40 +179,22 @@
         <header>
             <a href="index.html">Ari Moline</a>
             <a href="contact.html">Contact</a>
+            <a href="writing-and-creative-work.html">Writing</a>
             <a href="academic-work.html">Academic Work</a>
-            <a href="language-revitalization-work.html">Language Revitalization Work</a>
-            <a href="writing-and-creative-work.html">Writing & Creative</a>
+            <a href="language-revitalization-work.html">Language Teaching Work</a>
         </header>
         <div id="frame">
             <div id="container">
-                <div id="nameplate"><span class="bold">א</span>&ю<span class="special">è</span>Ñ</span><br/><span class="arabic">ت</span><span class="japanese">ヱ</span>Жẃ<span class="special">è</span>Ñ</span></div>
+                <div id="nameplate"></div>
                 <div id="container_bg">
-                    <!-- <svg xmlns="http://www.w3.org/2000/svg" width="529" height="235" viewBox="0 0 529 235" fill="none">
-                        <path d="M1 233.5H10.5C18.7843 233.5 25.5 226.784 25.5 218.5V16.5C25.5 8.21573 18.7843 1.5 10.5 1.5H1V1.5C1 16.964 13.536 29.5 29 29.5H499.5C514.964 29.5 527.5 16.964 527.5 1.5V1.5H516C507.716 1.5 501 8.21573 501 16.5V218.5C501 226.784 507.716 233.5 516 233.5H527.5V233.5C527.5 220.797 517.203 210.5 504.5 210.5H24C11.2975 210.5 1 220.797 1 233.5V233.5Z" stroke="white" stroke-width="2"/>
-                      </svg> -->
                     <main>
-                        <div id="blurb">
-                            <h1>Ari Moline</h1>
-                            <p>I’m a <span class="flourish">writer</span> and <span class="flourish">applied linguist</span>. I organize my world by asking what language can do, and what’s <span class="flourish">beyond</span> it.</p>
-                        </div>
+                        <h2>Ari Moline</h2>
+                        <div id="blurb">I’m a <span class="flourish">writer</span> and <span class="flourish">applied linguist</span>. I organize my world by asking what language can do, and what’s <span class="flourish">beyond</span> it.</div>
                         <div id="mobile_nav">
-                            <h2>What I do</h2>
+                            <h2>What I Do</h2>
+                            <a href="writing-and-creative-work.html">Writing<svg-arrow></svg-arrow></a>
                             <a href="academic-work.html">Academic Work <svg-arrow></svg-arrow></a>
-                            <a href="language-revitalization-work.html">Language Revitalization Work <svg-arrow></svg-arrow></a>
-                            <a href="writing-and-creative-work.html">Writing & Creative <svg-arrow></svg-arrow></a>
-                        </div>
-                        <div id="desktop_nav">
-                            <a href="contact.html" id="contact"><button>Contact me ></button></a>
-                            <a href="https://www.linkedin.com/in/ari-moline" target="_blank" >
-                                <div class="social-link">
-                                    <div class="icon-wrapper">
-                                        <div class="icon linkedin"></div>
-                                    </div>
-                                    <div class="label">
-                                        LinkedIn <svg-arrow></svg-arrow>
-                                    </div>
-                                </div>
-                            </a>
+                            <a href="language-revitalization-work.html">Language Teaching Work <svg-arrow></svg-arrow></a>
                         </div>
                     </main>
                 </div>
