@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width" />
+        <link rel="icon" href="favicon.png">
+        <title>Ari Moline | Home</title>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova:ital,wght@0,400..700;1,400..700&family=Jacquard+12&family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+
+        <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+
+        <script type="text/javascript">
+            $(document).ready(function(){
+                // linkHider
+                const thisUrlTail = $(location).attr('href').split("/").pop();
+                $(`footer nav a[href=${thisUrlTail}]`).hide();
+            });
+        </script>
+        
+        <style type="text/css">
+            @font-face {
+                font-family: 'Trattatello';
+                src: url('assets/fonts/Trattatello.ttf'); 
+                size-adjust: 130%;
+            }
+            @font-face {
+                font-family: 'Neue Machina';
+                src: url('assets/fonts/NeueMachina.otf'); 
+                size-adjust: 130%;
+            }
+            :root
+            {
+                --flourish-color: #3A9C66;
+            }
+
+            /* ALL DEVICES*/
+            *   {
+                box-sizing: border-box;
+            }
+            body {
+                margin: 0px;
+                padding: 0px;
+                font-family: 'Manrope';
+                background-color: #FAECD0;
+                color: #544227;
+            }
+            header, footer
+            {
+                width: 100vh;
+                color: #FFF;
+                background-color: var(--flourish-color);
+            }
+            h1, h2, header:first-child 
+            {
+                font-family: 'Jacquard 12';
+            }
+            a, .flourish
+            {
+                color: var(--flourish-color);
+            }
+            .flourish
+            {
+                font-family: 'Trattatello';
+            }
+            main a::after
+            {
+                content: '>';
+                color: var(--flourish-color);
+            }
+
+            /* MOBILE */
+            @media only screen
+                and (min-device-width: 300px) 
+                and (max-device-width: 812px) 
+                and (orientation: portrait) { 
+
+                    header {
+                        display: none;
+                    }
+
+            }
+            /* DESKTOP */
+            @media only screen and (min-device-width: 813px) {
+                footer {
+                    display: none;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <a href="index.html">Ari Moline</a>
+            <a href="contact.html">Contact</a>
+            <a href="academic-work.html">Academic Work</a>
+            <a href="language-revitalization-work.html">Language Revitalization Work</a>
+            <a href="writing-and-creative-work.html">Writing</a>
+        </header>
+        <main>
+            <h1>Ari Moline</h1>
+            <p>I’m a writer and applied linguist. I organize my world by asking what language can do, and what’s beyond it.</p>
+            <h2>What I do</h2>
+            <a href="academic-work.html">Academic Work</a>
+            <a href="language-revitalization-work.html">Language Revitalization Work</a>
+            <a href="writing-and-creative-work.html">Writing</a>
+        </main>
+        <footer>
+            <nav>
+                <a href="contact.html" id="contact"><h1>Contact > 💌</h1></a>
+            </nav>
+        </footer>
+    </body>
+</html>
